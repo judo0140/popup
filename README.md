@@ -113,3 +113,13 @@ rosrun popup popup_dxl_v2.py
 
 ----------------
 ## 2. 소프트웨어 구성
+
+### 2-1. Dialogflow intents
+
+dialogflow에서 설정하는 intents가 라즈베리파이에 전송되는 ROS topic 메세지가 됨
+ex) intents = "bed open" 일 경우 PC에서 라즈베리파이로 전송되는 topic은 "bed open" 이 됨
+
+침대(1, 0.5, 0):사이드테이블(1, 0):의자(1, 0):책상(1, 0) 형태로 intents 설정
+ex)
+침대 전부 나옴 / 사이드테이블 들어감 / 의자 들어감 / 책상 들어감 >> intents = "1:0:0:0"
+침대 절반 나옴 / 사이드테이블 나옴 / 의자 들어감 / 책상 나옴 >> intents = "0.5:1:0:1"
