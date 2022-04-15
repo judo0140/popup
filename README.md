@@ -151,3 +151,46 @@ Dialogflow intents 설정은 상단 '0. 서비스 계정 만들기 및 dialogflo
 ### 2-2. 각 코드 설명
 
 코드 파일 내부의 주석 
+
+### 2-3. OpenCR 펌웨어
+
+본 시스템에서 OpenCR은 라즈베리파이를 이용하여 다이나믹셀 구동을 위한 usb2dxl 역할을 하기에 이에 맞는 펌웨어가 업로드 되어있어야 함
+
+아두이노IDE 설치 : https://emanual.robotis.com/docs/en/parts/controller/opencr10/#install-on-linux
+OpenCR 보드에 다이나믹셀 컨트롤을 위한 펌웨어 업로드 (OpenCR을 u2d2처럼 사용)
+1) OpenCR 보드를 아두이노 IDE 실행시킬 메인 보드에 연결
+2) 아두이노IDE 실행
+3) Tool -> Port -> /dev/ttyACM0 (혹은 ttyUSB0.. 혹은 PC 환경마다 상이) 선택
+4) File -> Examples -> OpenCR -> 10.Etc -> usb_to_dxl 클릭
+5) 업로드
+
+### 2-4. 다이나믹셀 다중 컨트롤을 위한 ID 변경
+
+OpenCR 보드에 ID 변경하고자 하는 다이나믹셀 연결
+(OpenCR은 아두이노IDE를 실행시키는 PC와 연결)
+
+1) 아두이노IDE 실행
+2) Tool -> Port -> /dev/ttyACM0 (혹은 ttyUSB0.. 혹은 PC 환경마다 상이) 선택
+3) File -> Examples ->
+
+------------------
+## 3. 하드웨어 구성
+
+### 3-1. 다이나믹셀 및 OpenCR
+
+다이나믹셀 XM540-W270-R/T 사용
+구매 : https://www.robotis.com/shop/list.php?ca_id=202020
+사양 및 메뉴얼 : https://emanual.robotis.com/docs/kr/dxl/x/xm540-w270/
+
+OpenCR
+구매 : https://www.robotis.com/shop/item.php?it_id=903-0257-000
+
+### 3-2. 프로파일 및 볼트, 너트, 브라켓
+
+디바이스마트 메이커 서비스 활용
+링크 : https://www.devicemart.co.kr/goods/maker?custom=al_profile
+(원하는 규격으로 선택하여 구매)
+
+### 3-3. 와이어 릴, 릴 커버 모델링 파일
+
+CAD 폴더 
