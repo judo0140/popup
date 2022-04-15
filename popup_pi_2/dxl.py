@@ -5,6 +5,10 @@ from std_msgs.msg import String
 
 from dynamixel_sdk import * # Uses Dynamixel SDK library
 
+# 다이나믹셀 구동시 필요 기능 모듈화를 위한 코드 (다이나믹셀 모델이 변경될 시 line 12~28 수정 필요)
+# 각 모델에 따른 기능별 주소 값은 다음 링크 참고 (https://emanual.robotis.com/docs/kr/dxl/)
+
+
 ADDR_TORQUE_ENABLE          = 64
 ADDR_GOAL_POSITION          = 116
 ADDR_GOAL_VELOCITY          = 104
