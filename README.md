@@ -191,6 +191,9 @@ OpenCR
 링크 : https://www.devicemart.co.kr/goods/maker?custom=al_profile
 (원하는 규격으로 선택하여 구매)
 
-### 3-3. 와이어 릴, 릴 커버 모델링 파일
+### 3-3. 와이어 릴, 릴 커버, 브라켓 모델링 파일
 
-CAD 폴더 
+CAD 폴더 참고
+(브라켓의 경우 상황에 따라 치수를 변동하여 출력하기를 권장)
+
+
