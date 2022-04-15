@@ -1,6 +1,7 @@
 # popup
 ## 0. 서비스 계정 만들기 및 dialogflow 사용하기
 
+### 0-1. 서비스 계정 만들기
 cloud.google.com 접속
 
 우측 상단 '콘솔' 클릭
@@ -19,6 +20,7 @@ cloud.google.com 접속
 
 ![image](https://user-images.githubusercontent.com/61779427/162685985-ff68436c-1675-498a-a77d-beed2f5dd7a0.png)
 
+ex)
 계정이름 judo
 계정ID judo-527
 이메일주소 judo-527@popup-346822.iam.gserviceaccount.com
@@ -33,6 +35,7 @@ cloud.google.com 접속
 json 형태 key 파일 다운로드
 (json 파일을 사용하고자 하는 메인 PC로 복사)
 
+### 0-2. dialogflow agent 생성 및 intents 생성
 
 dialogflow.google.com 접속
 
@@ -51,13 +54,16 @@ Tranining Phrases : 인식하고자 하는 음성
 
 save 클릭
 
+### 0-3. 서비스 계정 json key 
 
 사용하고자 하는 메인 PC에서 json key 파일 적용
 
 ~/catkin_ws/pop_up_space/scripts/real_time_test.py
 ~/catkin_ws/pop_up_space/scripts/pub_dialogflow.py
 
-에서 project id, json 파일 위치 변경
+![image](https://user-images.githubusercontent.com/61779427/163499413-118a1a6e-6ff6-4b36-b826-747d143e8ee8.png)
+
+노란 박스 부분의 project id, json 파일 위치 변경
 
 ![스크린샷  2022-04-11 16-55-06](https://user-images.githubusercontent.com/61779427/162693571-9d5e739f-3f20-42fd-af2e-b4d0d702aac2.png)
 
@@ -118,14 +124,14 @@ rosrun popup popup_dxl_v2.py
 노드 실행 이전에 반드시 의자, 책상은 다 펴진 상태
 
 
-### 1-4. popup 초기 세팅
+### 1-4. dialogflow 없이 구동시키기 (PC에서 수동으로 topic 전송)
 
 (roscore가 동작한다는 전제 하에)
 메인 PC 에서 터미널 실행
 ```
 rostopic pub -1 /popup_mode std_msgs/String "b1:1:1:1"
 ```
-실행하면 모든 모듈이 밖으로 나온 상태가 
+"b1:1:1:1" 안의 내용만 원하는 수치를 기입할 것
 
 ----------------
 ## 2. 소프트웨어 구성
@@ -140,4 +146,8 @@ ex)
 침대 전부 나옴 / 사이드테이블 들어감 / 의자 들어감 / 책상 들어감 >> intents = "b1:0:0:0"
 침대 절반 나옴 / 사이드테이블 나옴 / 의자 들어감 / 책상 나옴 >> intents = "b0.5:1:0:1"
 
-Dialogflow intents 설정은 상단 
+Dialogflow intents 설정은 상단 '0. 서비스 계정 만들기 및 dialogflow 사용하기' 참고
+
+### 2-2. 각 코드 설명
+
+코드 파일 내부의 주석 
