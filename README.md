@@ -176,6 +176,7 @@ OpenCR 보드에 ID 변경하고자 하는 다이나믹셀 연결
 2) Tool -> Port -> /dev/ttyACM0 (혹은 ttyUSB0.. 혹은 PC 환경마다 상이) 선택
 3) File -> Examples -> OpenCR -> 8. DynamixelWorkbench -> c_ID_Change
 4) 코드에서 변경하고자 하는 다이나믹셀 기존 ID, 변경 후 ID 수정
+5) 
 ![스크린샷, 2022-04-15 10-19-44](https://user-images.githubusercontent.com/61779427/163502982-ca088c08-c6a7-4ca7-bfa6-d17d21bfcbd8.png)
 
 5) 업로드 (업로드가 되면 ID 변경 완료된 것 시리얼 모니터 통해 확인 가능)
