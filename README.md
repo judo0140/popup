@@ -142,9 +142,12 @@ dialogflow에서 설정하는 intents가 라즈베리파이에 전송되는 ROS 
 ex) intents = "bed open" 일 경우 PC에서 라즈베리파이로 전송되는 topic은 "bed open" 이 됨
 
 침대(1, 0.5, 0):사이드테이블(1, 0):의자(1, 0):책상(1, 0) 형태로 intents 설정
+
 ex)
 침대 전부 나옴 / 사이드테이블 들어감 / 의자 들어감 / 책상 들어감 >> intents = "b1:0:0:0"
+
 침대 절반 나옴 / 사이드테이블 나옴 / 의자 들어감 / 책상 나옴 >> intents = "b0.5:1:0:1"
+
 
 Dialogflow intents 설정은 상단 '0. 서비스 계정 만들기 및 dialogflow 사용하기' 참고
 
@@ -171,7 +174,11 @@ OpenCR 보드에 ID 변경하고자 하는 다이나믹셀 연결
 
 1) 아두이노IDE 실행
 2) Tool -> Port -> /dev/ttyACM0 (혹은 ttyUSB0.. 혹은 PC 환경마다 상이) 선택
-3) File -> Examples ->
+3) File -> Examples -> OpenCR -> 8. DynamixelWorkbench -> c_ID_Change
+4) 코드에서 변경하고자 하는 다이나믹셀 기존 ID, 변경 후 ID 수정
+![스크린샷, 2022-04-15 10-19-44](https://user-images.githubusercontent.com/61779427/163502982-ca088c08-c6a7-4ca7-bfa6-d17d21bfcbd8.png)
+
+5) 업로드 (업로드가 되면 ID 변경 완료된 것 시리얼 모니터 통해 확인 가능)
 
 ------------------
 ## 3. 하드웨어 구성
