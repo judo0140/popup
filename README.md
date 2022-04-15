@@ -77,6 +77,9 @@ save 클릭
 * ssh 원격 접속을 위한 각 디바이스 ip address 파악
 * OpenCR 보드와 12V/5A 파워 연결 여부 및 보드 내 스위치 ON/OFF 여부
 
+![image](https://user-images.githubusercontent.com/61779427/163494820-5c9eb4d1-39b6-4751-ae93-5390ebf87e68.png)
+
+
 ### 1-1. 메인 PC
 터미널 실행 (Ctrl + Alt + T) 후 ROS 실행
 ```
